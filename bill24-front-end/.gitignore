@@ -40,13 +40,3 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-
-#Nothing to commit
-angular.json
-package.json
-package-lock.json
-README.md
-tailwind.config.js
-tsconfig.app.json
-tsconfig.json
-tsconfig.spec.json
