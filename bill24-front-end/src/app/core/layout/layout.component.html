@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="flex flex-col min-h-screen">
+  <div class="flex flex-1">
+    <ng-container *ngIf="isLoggedIn$ | async">
+      <app-sidebar class="w-64 bg-gray-800 text-white"></app-sidebar>
+    </ng-container>
+    <main class=" bg-gray-100 w-screen flex justify-center items-center">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+  <app-footer></app-footer>
+</div>
+

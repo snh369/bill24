@@ -1,0 +1,13 @@
+ext.versions = [:]
+ext.versions.lombok         = '1.18.30'
+ext.versions.springWeb      = '2.5.6'
+ext.versions.postgresql     = '42.2.20'
+ext.versions.jpa            = '2.5.6'
+ext.versions.hibernate      = '6.5.2'
+ext.versions.validation     = '2.5.6'
+ext.versions.webMvc         = '2.1.0'
+ext.versions.springSecurity = '2.5.6'
+ext.versions.jjwtApi        = '0.12.6'
+ext.versions.jjwtImpl       = '0.12.6'
+ext.versions.jjwtJackson    = '0.12.6'
+ext.versions.jackson        = '2.13.1'

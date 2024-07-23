@@ -1,0 +1,9 @@
+version: '1'
+services:
+  lms_api:
+    image: bill24_api
+    ports:
+      - "4141:4141"
+    volumes:
+      - ./build/libs/0.0.1-SNAPSHOT.jar:/app/0.0.1-SNAPSHOT.jar
+    restart: always 

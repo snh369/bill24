@@ -1,0 +1,57 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.1'
+	id 'io.spring.dependency-management' version '1.1.5'
+	id 'org.hibernate.orm' version '6.3.1.Final'
+	id 'org.graalvm.buildtools.native' version '0.10.1'
+}
+
+group = 'com.kosign'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+apply from: 'versions.gradle'
+apply from: 'libraries.gradle'
+
+dependencies {
+
+	implementation libraries.springWeb
+	implementation libraries.postgresql
+	implementation libraries.jpa
+	implementation libraries.validation
+	implementation libraries.springSecurity
+	implementation libraries.jjwtApi
+	implementation libraries.hibernate
+
+	implementation libraries.webMvc
+	compileOnly libraries.lombok
+	annotationProcessor libraries.lombok
+
+	runtimeOnly libraries.jjwtImpl
+	runtimeOnly libraries.jjwtJackson
+	runtimeOnly libraries.postgresql
+
+	testImplementation libraries.test
+	testImplementation libraries.testSecurity
+	testRuntimeOnly libraries.testRuntimeOnly
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

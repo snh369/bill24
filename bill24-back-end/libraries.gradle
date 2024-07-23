@@ -1,0 +1,19 @@
+apply from: "versions.gradle"
+
+ext.libraries = [:]
+ext.libraries.lombok            = "org.projectlombok:lombok:${versions.lombok}"
+ext.libraries.springWeb         = "org.springframework.boot:spring-boot-starter-web:${versions.springWeb}"
+ext.libraries.postgresql        = "org.postgresql:postgresql:${versions.postgresql}"
+ext.libraries.jpa               = "org.springframework.boot:spring-boot-starter-data-jpa:${versions.jpa}"
+ext.libraries.hibernate         = "org.hibernate:hibernate-core:${versions.hibernate}.Final"
+ext.libraries.validation        = "org.springframework.boot:spring-boot-starter-validation:${versions.validation}"
+ext.libraries.webMvc            = "org.springdoc:springdoc-openapi-starter-webmvc-ui:${versions.webMvc}"
+ext.libraries.springSecurity    = "org.springframework.boot:spring-boot-starter-security:${versions.springSecurity}"
+ext.libraries.jjwtApi           = "io.jsonwebtoken:jjwt-api:${versions.jjwtApi}"
+ext.libraries.jjwtImpl          = "io.jsonwebtoken:jjwt-impl:${versions.jjwtImpl}"
+ext.libraries.jjwtJackson       = "io.jsonwebtoken:jjwt-jackson:${versions.jjwtJackson}"
+ext.libraries.jacksonBind       = "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"
+
+ext.libraries.test              = "org.springframework.boot:spring-boot-starter-test"
+ext.libraries.testSecurity      = "org.springframework.security:spring-security-test"
+ext.libraries.testRuntimeOnly   = 'org.junit.platform:junit-platform-launcher'

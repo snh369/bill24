@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: bill24
+#  autoconfigure:
+#    exclude:
+#      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: dsa321
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
+
+security:
+  jwt:
+    secret-key: 9926dc2926fe34bee51351255975d18dd3b7cb18aaeacdd61b4c5e3cf825c524
+    expiration: 14400000
+
+jwt:
+  secret: bill24
+
+server:
+  port: 4141
+
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        web: DEBUG
+#pattern:
+#  console: "\u001B[32m%d{yyyy-MM-dd HH:mm:ss}\u001B[0m \u001B[36m[%thread]\u001B[0m %highlight(%-5level) \u001B[35m%logger{36}\u001B[0m - %msg%n"
